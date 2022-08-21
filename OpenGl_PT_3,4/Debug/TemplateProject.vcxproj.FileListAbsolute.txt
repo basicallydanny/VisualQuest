@@ -1,1 +1,2 @@
 C:\Users\danie\Desktop\teteraV2\Debug\TemplateProject.exe
+C:\Users\danie\Desktop\VisualQuest\OpenGl_PT_3,4\Debug\TemplateProject.exe

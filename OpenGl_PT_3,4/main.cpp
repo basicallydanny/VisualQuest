@@ -9,6 +9,8 @@
 #include "Tetera.h"
 #include "Triangulo.h"
 #include "Dona.h"
+#include "Cola.h"
+#include "Esfera.h"
 
 
 //-----------------------------------------------------------------------------
@@ -28,6 +30,11 @@ protected:
     Triangulo* miTriangulo;
     Dona* miDona;
 
+    Cola* cola;
+    Dona* cabeza;
+    Esfera* cuerpo;
+    Triangulo* oreja;
+
 
 public:
     myWindow() {}
@@ -41,16 +48,31 @@ public:
 
         if (shader) shader->begin();
 
-        glTranslatef(0, 0, -10);
+        glTranslatef(0, 0, -40);
         glPushMatrix();
 
-        //---------RETO DE DIBUJO 3--------
-        
-            miArbol->DibujarArbol(-6, 0, 0);
-            miTetera->DibujarTetera(6, 0, 0);
-            miTriangulo->DibujarTriangulo(0, 6, 0);
-            miDona->DibujarDona(0, -15, -50);
+        //---------RETO DE DIBUJO 4 --------
+        // Cola + Gato
+
+            glPushMatrix();
+            cola->dibujarCola(8, 5, 0);
+            cabeza->DibujarDona(9, 7, -5);
+            cuerpo->DibujarEsfera(10, -5, -60);
+            oreja->DibujarTriangulo(5.8, 7.2, 10);
+            glPushMatrix();
+            
             glPopMatrix();
+            glPopMatrix();
+
+//----------------------------------
+
+        //---------RETO DE DIBUJO 3 --------
+        
+            //miArbol->DibujarArbol(-6, 0, 0);
+            //miTetera->DibujarTetera(6, 0, 0);
+            //miTriangulo->DibujarTriangulo(0, 6, 0);
+            //miDona->DibujarDona(0, -15, -50);
+            //glPopMatrix();
         
         //----------------------------------
 
@@ -88,6 +110,11 @@ public:
         miTetera = new Tetera();
         miTriangulo = new Triangulo();
         miDona = new Dona();
+
+        cola = new Cola();
+        cabeza = new Dona();
+        cuerpo = new Esfera();
+        oreja = new Triangulo();
 
         DemoLight();
 

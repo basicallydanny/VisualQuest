@@ -73,6 +73,8 @@
     <ClInclude Include="Tetera.h" />
     <ClInclude Include="Triangulo.h" />
     <ClInclude Include="Dona.h" />
+    <ClInclude Include="Cola.h" />
+    <ClInclude Include="Esfera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="glew\source\glew.c">
@@ -161,6 +163,8 @@
     <ClCompile Include="Tetera.cpp" />
     <ClCompile Include="Triangulo.cpp" />
     <ClCompile Include="Dona.cpp" />
+    <ClCompile Include="Cola.cpp" />
+    <ClCompile Include="Esfera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="freeglut\source\freeglutdll.def">
